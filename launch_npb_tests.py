@@ -31,7 +31,7 @@ experiments_repo = Artifact.registerArtifact(
 
 gem5_repo = Artifact.registerArtifact(
     command = '''
-        git clone https://gem5.googlesource.com/public/gem5;
+        git clone old_artifacthttps://gem5.googlesource.com/public/gem5;
         cd gem5;
         git remote add darchr https://github.com/darchr/gem5;
         git fetch darchr;
