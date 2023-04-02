@@ -113,12 +113,12 @@ if __name__ == "__main__":
             'npb experiments',
             'gem5/build/X86/gem5.opt',
             'configs/run_npb.py',
-            f'''results/run_npb/{bm}/{clas}/{cpu}/{num_cpu}''',
+            'results/run_npb/{bm}/{clas}/{cpu}/{num_cpu}'.format(bm, clas, cpu, num_cpu),
             gem5_binary, gem5_repo, experiments_repo,
             'linux-stable/vmlinux-4.19.83',
             'disk-image/npb/npb-image/npb',
             linux_binary, disk_image,
-            cpu, bm.replace('.x', f'.{clas}.x'), num_cpu
+            cpu, bm.replace('.x', '.{clas}.x'.format(clas)), num_cpu
             )
     
     def worker(run):

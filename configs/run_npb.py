@@ -44,9 +44,13 @@ from m5.objects import *
 
 sys.path.append('gem5/configs/common/') # For the next line...
 import SimpleOpts
+sys.path.append('gem5/tests/configs/')
 
-sys.path.append('configs')
-from system import MySystem
+sys.path.append('/home/data/userhome/liqiang/lab/gem5-all/npb-tests/configs/system')
+print(sys.path)
+# from fs_tools import CowDisk
+print("I'm here")
+from system.system1 import MySystem
 
 def writeBenchScript(dir, bench):
     """

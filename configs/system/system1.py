@@ -32,14 +32,17 @@ from m5.objects import *
 from m5.util import convert
 from fs_tools import *
 from caches import *
+from 
 
+import sys
+# print(sys.path)
+# print(sys.executable)
 
 class MySystem(LinuxX86System):
 
     SimpleOpts.add_option("--no_host_parallel", default=False,
                 action="store_true",
                 help="Do NOT run gem5 on multiple host threads (kvm only)")
-
     SimpleOpts.add_option("--second_disk", default='',
                           help="The second disk image to mount (/dev/hdb)")
 
@@ -79,7 +82,7 @@ class MySystem(LinuxX86System):
 
         self.setDiskImages(disk, disk)
 
-	if opts.second_disk:
+        if opts.second_disk:
             self.setDiskImages(disk, opts.second_disk)
         else:
             self.setDiskImages(disk, disk)
