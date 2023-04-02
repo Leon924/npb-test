@@ -60,7 +60,7 @@ disk_image = Artifact.registerArtifact(
     typ = 'disk image',
     name = 'npb',
     cwd = 'disk-image/npb',
-    path = 'disk-image/npb/npb-image/npb',
+    path = 'disk-image/npb/npb-image/npb',f
     inputs = [packer, experiments_repo, m5_binary,],
     documentation = 'Ubuntu with m5 binary and NPB (with ROI annotations: darchr/npb-hooks/gem5art-npb-tutorial) installed.'
 )
@@ -112,7 +112,7 @@ if __name__ == "__main__":
     	return gem5Run.createFSRun(
             'npb experiments',
             'gem5/build/X86/gem5.opt',
-            'configs-npb-tests/run_npb.py',
+            'configs/run_npb.py',
             f'''results/run_npb/{bm}/{clas}/{cpu}/{num_cpu}''',
             gem5_binary, gem5_repo, experiments_repo,
             'linux-stable/vmlinux-4.19.83',
