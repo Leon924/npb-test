@@ -60,7 +60,7 @@ disk_image = Artifact.registerArtifact(
     typ = 'disk image',
     name = 'npb',
     cwd = 'disk-image/npb',
-    path = 'disk-image/npb/npb-image/npb',f
+    path = 'disk-image/npb/npb-image/npb',
     inputs = [packer, experiments_repo, m5_binary,],
     documentation = 'Ubuntu with m5 binary and NPB (with ROI annotations: darchr/npb-hooks/gem5art-npb-tutorial) installed.'
 )
