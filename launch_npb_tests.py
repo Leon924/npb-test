@@ -109,7 +109,7 @@ if __name__ == "__main__":
     cpus = ['atomic','timing']
  
     def createRun(bm, clas, cpu, num_cpu):
-    	return gem5Run.createFSRun(
+        return gem5Run.createFSRun(
             'npb experiments',
             'gem5/build/X86/gem5.opt',
             'configs/run_npb.py',
@@ -120,7 +120,7 @@ if __name__ == "__main__":
             linux_binary, disk_image,
             cpu, bm.replace('.x', f'.{clas}.x'), num_cpu
             )
-
+    
     def worker(run):
         run.run()
         json = run.dumpsJson()
